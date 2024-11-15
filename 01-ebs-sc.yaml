@@ -5,4 +5,4 @@ metadata:
   namespace: expense
 provisioner: ebs.csi.aws.com
 reclaimPolicy: Retain
-volumeBindingMode: waitForFirstConsumer
+volumeBindingMode: WaitForFirstConsumer
