@@ -58,10 +58,11 @@ spec:
         image: cekharch/mysql:v1
         volumeMounts:
         - name: mysql-statefulset
-          mountPath: /var/log/mysql
+          mountPath: /var/lib/mysql
   volumeClaimTemplates:
   - metadata:
       name: mysql-statefulset
+      namespace: expense
     spec:
       accessModes: [ "ReadWriteOnce" ]
       storageClassName: "expense-ebs-sc"
